@@ -1,3 +1,3 @@
-# [kotlin-SpringBoot-mongodb](https://spring.io/guides/gs/accessing-data-mongodb/)
+### kotlin-SpringBoot-mongodb
 
-Translated to Kotlin from Java.
+Translated from [SpringBoot Java tutorial](https://spring.io/guides/gs/accessing-data-mongodb/).
