@@ -1,4 +1,4 @@
-package hello
+package prat
 
 import org.springframework.data.mongodb.repository.MongoRepository
 
