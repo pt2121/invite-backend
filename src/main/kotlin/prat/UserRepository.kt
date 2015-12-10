@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository
 
 interface UserRepository : MongoRepository<User, String> {
 
-  fun findByPhoneNumber(phoneNumber: String): User
+  fun findByPhoneNumber(phoneNumber: String): User?
   fun findByFirstName(firstName: String): List<User>
   fun findByLastName(lastName: String): List<User>
 

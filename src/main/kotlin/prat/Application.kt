@@ -22,7 +22,7 @@ open class Application : CommandLineRunner {
 
   @Throws(Exception::class)
   override fun run(vararg args: String) {
-    
+
     repository!!.deleteAll()
 
     // save a couple of customers
@@ -73,25 +73,31 @@ open class Application : CommandLineRunner {
     inviteRepository.save(Invite(
         alice,
         katy1,
-        "40.7248103,-74.0099216",
-        "240 Hudson St",
-        "Join us!"
+        destinationLatLng = "40.7248103,-74.0099216",
+        destinationAddress = "240 Hudson St",
+        message = "Join us!",
+        status = Status.PENDING,
+        originLatLng = ""
     ))
 
     inviteRepository.save(Invite(
         alice,
         katy1,
-        "40.750572,-73.9957077",
-        "Pennsylvania Station, New York",
-        "See you at Penn Station"
+        destinationLatLng = "40.750572,-73.9957077",
+        destinationAddress = "Pennsylvania Station, New York",
+        message = "See you at Penn Station",
+        status = Status.PENDING,
+        originLatLng = ""
     ))
 
     inviteRepository.save(Invite(
         katy2,
         alice,
-        "40.725626,-74.3059437",
-        "Millburn, NJ",
-        "Meet at my place?"
+        destinationLatLng = "40.725626,-74.3059437",
+        destinationAddress = "Millburn, NJ",
+        message = "Meet at my place?",
+        status = Status.PENDING,
+        originLatLng = ""
     ))
 
     // fetch all invites
@@ -103,7 +109,7 @@ open class Application : CommandLineRunner {
     println()
 
     println("-------------------------------")
-    inviteRepository.findByLatLng("40.750572,-73.9957077").forEach {
+    inviteRepository.findByDestinationLatLng("40.750572,-73.9957077").forEach {
       println(it)
     }
     println()
