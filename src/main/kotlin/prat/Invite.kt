@@ -14,8 +14,9 @@ data class Invite(@JsonProperty("from") val from: User,
                   @JsonProperty("destinationAddress") val destinationAddress: String,
                   @JsonProperty("message") val message: String,
                   @JsonProperty("status") val status: Status,
-                  @JsonProperty("originLatLng") val originLatLng: String) { // somehow Spring failed when adding a default value here
+                  @JsonProperty("pickupAddress") val pickupAddress: String) { // somehow Spring failed when adding a default value here
   @Id
+  @JsonProperty("_id")
   private val id: String? = null
 }
 

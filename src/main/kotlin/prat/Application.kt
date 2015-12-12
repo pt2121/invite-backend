@@ -77,7 +77,7 @@ open class Application : CommandLineRunner {
         destinationAddress = "240 Hudson St",
         message = "Join us!",
         status = Status.PENDING,
-        originLatLng = ""
+        pickupAddress = ""
     ))
 
     inviteRepository.save(Invite(
@@ -87,7 +87,7 @@ open class Application : CommandLineRunner {
         destinationAddress = "Pennsylvania Station, New York",
         message = "See you at Penn Station",
         status = Status.PENDING,
-        originLatLng = ""
+        pickupAddress = ""
     ))
 
     inviteRepository.save(Invite(
@@ -97,7 +97,7 @@ open class Application : CommandLineRunner {
         destinationAddress = "Millburn, NJ",
         message = "Meet at my place?",
         status = Status.PENDING,
-        originLatLng = ""
+        pickupAddress = ""
     ))
 
     // fetch all invites
