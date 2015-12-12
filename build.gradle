@@ -16,7 +16,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'kotlin'
 
 jar {
-    baseName = 'gs-accessing-data-mongodb'
+    baseName = 'invite-backend'
     version = '0.1.0'
 }
 
@@ -37,4 +37,8 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.9'
+}
+
+task stage {
+    dependsOn build
 }
