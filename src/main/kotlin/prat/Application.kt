@@ -17,8 +17,8 @@ open class Application : CommandLineRunner {
   @Autowired
   private val inviteRepository: InviteRepository? = null
 
-  @Autowired
-  private val userRepository: UserRepository? = null
+  //@Autowired
+  //private val userRepository: UserRepository? = null
 
   @Throws(Exception::class)
   override fun run(vararg args: String) {
@@ -51,24 +51,24 @@ open class Application : CommandLineRunner {
     println("-------------------------------")
 
     inviteRepository!!.deleteAll()
-    userRepository!!.deleteAll()
+    //userRepository!!.deleteAll()
 
     val alice = User("Alice", "Smiths", "6466445321")
-    userRepository.save(alice)
+    //userRepository.save(alice)
     val katy1 = User("Katy", "Wang", "6465450967")
-    userRepository.save(katy1)
+    //userRepository.save(katy1)
     val katy2 = User("Katy", "Jones", "4152393947")
-    userRepository.save(katy2)
+    //userRepository.save(katy2)
 
-    val katy = userRepository.findByPhoneNumber("6465450967")
-    println("find by phone number: $katy")
-    println("-------------------------------")
-
-    val users = userRepository.findByFirstName("Katy")
-    users.forEach {
-      println("   $it")
-    }
-    println("-------------------------------")
+    //val katy = userRepository.findByPhoneNumber("6465450967")
+    //println("find by phone number: $katy")
+//    println("-------------------------------")
+//
+//    val users = userRepository.findByFirstName("Katy")
+//    users.forEach {
+//      println("   $it")
+//    }
+//    println("-------------------------------")
 
     inviteRepository.save(Invite(
         alice,
